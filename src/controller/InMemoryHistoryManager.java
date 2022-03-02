@@ -8,9 +8,25 @@ import java.util.Map;
 
 public class InMemoryHistoryManager implements HistoryManager {
 
-    private static final Map<Integer, Node> historyMap = new HashMap<>();
-    Node tail;
-    Node head;
+    private final Map<Integer, Node> historyMap = new HashMap<>();
+    private Node tail;
+    private Node head;
+
+    public Node getTail() {
+        return tail;
+    }
+
+    public void setTail(Node tail) {
+        this.tail = tail;
+    }
+
+    public Node getHead() {
+        return head;
+    }
+
+    public void setHead(Node head) {
+        this.head = head;
+    }
 
     @Override
     public void add(Task task) {
